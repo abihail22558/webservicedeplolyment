@@ -25,6 +25,8 @@ This project provides a step-by-step guide to create a static website hosted on 
 3. **Set up a Virtual Network (VNet)**:  
    - Create a VNet (e.g., `VNetStaticWebsite`) with a subnet (e.g., `WebSubnet`).
 
+![image](https://github.com/user-attachments/assets/b64b9bbd-037f-4ea8-96a5-fef3df826393)
+
 4. **Deploy the Virtual Machine**:  
    - Choose Ubuntu or any Linux distribution as the image.
    - Ensure HTTP (port 80) traffic is allowed in the network security group (NSG).
