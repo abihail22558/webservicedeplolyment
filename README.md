@@ -34,6 +34,7 @@ This project provides a step-by-step guide to create a static website hosted on 
 5. **Configure Network Security**:  
    - Create an NSG and allow inbound HTTP traffic.
    - Attach the NSG to the VM's subnet.
+![image](https://github.com/user-attachments/assets/4608c0ce-ca2b-414a-84b8-d3bd1e93bba9)
 
 ### 2. Install and Configure a Web Server
 
@@ -52,6 +53,7 @@ This project provides a step-by-step guide to create a static website hosted on 
      sudo nano /var/www/html/index.html
      ```
    - Add your HTML content (e.g., "Hello World!").
+![image](https://github.com/user-attachments/assets/1f827c27-183b-472b-8efd-5acdb7270b91)
 
 4. **Restart the Web Server**:  
    ```bash
@@ -60,13 +62,17 @@ This project provides a step-by-step guide to create a static website hosted on 
 
 5. **Test the Website**:  
    - Open the VM's public IP in a browser.
+![image](https://github.com/user-attachments/assets/b2ca879b-091e-43a6-aa2b-22daa9d32a41)
 
 ### 3. Optional Enhancements
 
 #### Add a CDN Using Azure Front Door
 
-1. Create a Front Door profile.  
+1. Create a Front Door profile.
+   ![image](https://github.com/user-attachments/assets/4f5be451-b878-4698-a4a2-f561134b88c2)
+
 2. Configure it to route traffic to the VM's public IP.
+![image](https://github.com/user-attachments/assets/122e6145-e2ad-4f7a-9a4b-ce30047954fe)
 
 #### Automate Deployment with Terraform
 
