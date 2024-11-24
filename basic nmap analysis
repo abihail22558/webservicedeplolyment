@@ -1,0 +1,94 @@
+
+
+
+# Tasks for Basic Network Analysis
+
+## Overview
+This guide provides step-by-step instructions for conducting a **basic network scan** using the **Nmap** tool. The tasks involve identifying active hosts, listing open ports, discovering running services, and detecting operating systems on devices within a network.
+
+---
+
+## Prerequisites
+1. A computer with **Nmap** installed.
+2. Access to the terminal or command prompt.
+3. Knowledge of the local network IP range.
+
+---
+
+## Tasks
+
+### Task 1: Perform a Basic Network Scan
+1. **Identify the IP Address and Subnet**:
+   - Open the terminal or command prompt on your local computer.
+   - Run the following command to determine the host IP address and subnet:
+     ```bash
+     ipconfig
+     ```
+
+2. **Run a Basic Network Scan**:
+   - Use the following command to scan the network range:
+     ```bash
+     nmap [HostIPAddress/NetworkRange]
+     ```
+   - Example:
+     ```bash
+     nmap 192.168.1.0/24
+     ```
+
+---
+
+### Task 2: Identify Active Hosts
+To find all active hosts on the network:
+- Use the following command:
+  ```bash
+  nmap -sn [HostIPAddress/NetworkRange]
+  ```
+- Replace `[HostIPAddress/NetworkRange]` with the actual host IP address and range.
+- Example:
+  ```bash
+  nmap -sn 192.168.1.0/24
+  ```
+
+---
+
+### Task 3: List Open Ports and Running Services
+To detect open ports and the services running on each host:
+- Use the following command:
+  ```bash
+  nmap -sV [HostIPAddress/NetworkRange]
+  ```
+- Replace `[HostIPAddress/NetworkRange]` with the actual host IP address and range.
+- Example:
+  ```bash
+  nmap -sV 192.168.1.0/24
+  ```
+
+---
+
+### Task 4: Identify Operating Systems
+To detect the operating system used by devices on the network:
+- Use the following command:
+  ```bash
+  nmap -O [HostIPAddress/NetworkRange]
+  ```
+- Replace `[HostIPAddress/NetworkRange]` with the actual host IP address and range.
+- Example:
+  ```bash
+  nmap -O 192.168.1.0/24
+  ```
+
+---
+
+## Notes
+- Ensure you have permission to scan the network to comply with legal and ethical standards.
+- Scans should be performed within controlled environments for educational or authorized professional purposes.
+
+---
+
+## Tools Used
+- **Nmap**: An open-source network scanning tool for network discovery and security auditing.
+
+---
+
+## Disclaimer
+This guide is for informational and educational purposes only. Unauthorized use of Nmap or similar tools on networks you do not own or have explicit permission to scan is illegal and punishable under applicable laws.
