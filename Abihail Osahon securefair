@@ -1,0 +1,96 @@
+
+
+
+# Basic Network Scan Analysis Using Nmap
+
+## Author
+**Abihail Osahon Uwa**  
+**Location**: Nigeria  
+**Membership Number**: AM-2024ANER6098  
+
+---
+
+## Project Overview
+This project details a **network discovery and vulnerability assessment** using the open-source tool **Nmap**. The primary aim was to identify active hosts, open ports, services, and operating systems within a local network and evaluate potential vulnerabilities.
+
+---
+
+## Objectives
+1. Perform a **basic network scan** using Nmap.
+2. Identify **active hosts** within the specified network.
+3. Detect **open ports** and the associated **services** running on each host.
+4. Conduct **operating system (OS) detection** to assess potential vulnerabilities.
+
+---
+
+## Methodology
+The scan was conducted on the **92.168.56.1/24 subnet**, following these steps:
+
+1. **Determine Network Range**:
+   - Command: `ipconfig`  
+
+2. **Network Discovery**:
+   - Command: `nmap -sn 92.168.56.1/24`  
+
+3. **Port and Service Scan**:
+   - Command: `nmap -sV 92.168.56.1/24`  
+
+4. **Operating System Detection**:
+   - Command: `nmap -O 92.168.56.1/24`  
+
+---
+
+## Results
+The scan identified **256 IP addresses**, with **22 active hosts**. Below are key highlights:
+
+### Example Host Analysis:
+- **Host 1**:  
+  - **IP**: 92.168.56.1  
+  - **Status**: Up  
+  - **Open Ports**:
+    - 22/tcp – SSH  
+    - 80/tcp – HTTP  
+    - 443/tcp – HTTPS  
+  - **OS**: Linux 2.6.32 - 3.10  
+
+- **Host 3**:  
+  - **IP**: 92.168.56.45  
+  - **Status**: Up  
+  - **Open Ports**:
+    - 21/tcp – FTP  
+    - 22/tcp – SSH  
+    - 80/tcp – HTTP  
+    - 443/tcp – HTTPS  
+  - **OS**: Linux 2.6.32 - 3.10  
+
+- **Host 10**:  
+  - **IP**: 92.168.56.117  
+  - **Status**: Up  
+  - **Open Ports**: None  
+  - **OS**: Fortinet Fort iOS 6.X|7.X  
+
+- **Host 16**:  
+  - **IP**: 92.168.56.241  
+  - **Status**: Up  
+  - **Open Ports**:
+    - 1443/tcp – IES-LM  
+    - 4444/tcp – krb524  
+    - 8443/tcp – HTTPS-ALT  
+  - **OS**: One Access 1641 Router  
+
+---
+
+## Key Insights
+- A total of **22 active hosts** were identified, many with open ports and services that could be exploited.  
+- Detected operating systems included **Linux**, **macOS**, **FreeBSD**, **Fortinet FortiOS**, and **VoIP phones**.  
+- Further analysis is recommended for hosts with critical open ports like **443 (HTTPS)**, **22 (SSH)**, and **80 (HTTP)** to address potential vulnerabilities.
+
+---
+
+## Tools Used
+- **Nmap**: Open-source network scanning tool.
+
+---
+
+## Disclaimer
+This analysis was conducted in a controlled environment for educational and professional development purposes. Always ensure compliance with applicable regulations and permissions when conducting similar assessments.
